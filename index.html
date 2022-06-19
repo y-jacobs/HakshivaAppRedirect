@@ -6,10 +6,29 @@
     <link rel="stylesheet" href="css/style.css">
 	
 	<script>
-		var base = 'exp://192.168.1.103:19000/--/MainApp/Media/MediaScreenList?';
 		var param = window.location.search;
+		if (param.includes("mediaId")) {
+			var base = 'exp://192.168.1.103:19000/--/MainApp/Media/MediaScreenList?';
+			window.location.href = base + param;
+		}
+		else if (param.includes("seriesId")) {
+			var base = 'exp://192.168.1.103:19000/--/MainApp/MainStack/Series?';
+			window.location.href = base + param;
+		}
+		else if (param.includes("authorId")) {
+			var base = 'exp://192.168.1.103:19000/--/MainApp/MainStack/Author?';
+			window.location.href = base + param;
+		}
+		else {
+			var trilili = "tralala";
+		}
+			
+		
 		window.location.href = base + param;
 	</script>
   </head>
-  	<a href="intent:#Intent;exp://192.168.1.103:19000/--/MainApp/Media/MediaScreenList?mediaId=6291254cb206af32abf4a714">Open Map</a>
+	<body>
+		<p>broken link.</p>
+	</body>
+		
 </html>
